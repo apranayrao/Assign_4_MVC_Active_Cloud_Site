@@ -1,0 +1,22 @@
+﻿@model Assign_4_MVC_Active_Cloud_Site.Models.Rootobject
+
+<h1>Products</h1>
+<hr />
+
+@foreach (var item in Model.results)
+{
+    foreach (var prod in item.products)
+    {
+        <div>
+            <h3>
+                @Html.DisplayFor(modelItem => prod.name_brand)
+            </h3>
+        </div>
+    }
+
+}
+
+
+<script>
+    alertDbSave(@ViewBag.dbSuccessComp);
+</script>
