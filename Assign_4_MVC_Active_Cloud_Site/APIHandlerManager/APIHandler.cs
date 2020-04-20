@@ -15,8 +15,7 @@ namespace Assign_4_MVC_Active_Cloud_Site.APIHandlerManager
         // https://www.nps.gov/subjects/developer/get-started.htm
 
         //  static string BASE_URL = "?api_key=Uyij4Wif5gsZEfW4IrxqZ3nltyJeuu0EN1uxBhSO";
-        static string BASE_URL = "https://developer.nrel.gov/api/alt-fuel-stations/v1/nearest.json?api_key=uaazf7krUupKwzLefPZs9DJ4FXlp7gPktK3pkF4x&location=Denver+CO";
-        static string API_KEY = "uaazf7krUupKwzLefPZs9DJ4FXlp7gPktK3pkF4x"; //Add your API key here inside ""
+        static string BASE_URL = "https://api.fda.gov/food/event.json?";
         HttpClient httpClient;
 
         /// <summary>
@@ -26,7 +25,6 @@ namespace Assign_4_MVC_Active_Cloud_Site.APIHandlerManager
         {
             httpClient = new HttpClient();
             httpClient.DefaultRequestHeaders.Accept.Clear();
-            httpClient.DefaultRequestHeaders.Add("X-Api-Key", API_KEY);
             httpClient.DefaultRequestHeaders.Accept.Add(
                 new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/json"));
         }
