@@ -1,21 +1,33 @@
 ﻿@model Assign_4_MVC_Active_Cloud_Site.Models.Rootobject
-<h1>Products</h1>
+<h1>Food Products</h1>
 <hr />
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Food Brand
+            </th>
+        </tr>
+    </thead>
 
-@foreach (var item in Model.results)
-{
-    foreach (var prod in item.products)
-    {
-        <div>
-            <h3>
+    <tbody>
+        @foreach (var item in Model.results)
+        {
+            foreach (var prod in item.products)
+            {
+        <tr>
+            <td>
+
                 @Html.DisplayFor(modelItem => prod.name_brand)
-            </h3>
-        </div>
-    }
+            </td>
+        </tr>
 
-}
+                }
 
+                }
 
+</tbody>
+</table>
 <script>
     alertDbSave(@ViewBag.dbSuccessComp);
 </script>
